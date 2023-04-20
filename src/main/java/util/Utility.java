@@ -1,7 +1,12 @@
 package util;
 
+import domain.CircularDoublyLinkedList;
+import domain.CircularLinkedList;
+
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Random;
@@ -9,33 +14,33 @@ import java.util.Random;
 public class Utility {
     private static Random random;    // pseudo-random number generator
     private static long seed;        // pseudo-random number generator seed
-    //private static SinglyLinkedList studentList;
-    //private static DoublyLinkedList courseList;
+    private static CircularDoublyLinkedList jobPositionList;
+    private static CircularLinkedList employeeList;
 
     // static initializer
     static {
         // this is how the seed was set in Java 1.4
         seed = System.currentTimeMillis();
         random = new Random(seed);
-        // studentList = new SinglyLinkedList();
-        // courseList = new DoublyLinkedList();
+        jobPositionList = new CircularDoublyLinkedList();
+        employeeList = new CircularLinkedList();
     }
 
-   /* public static SinglyLinkedList getStudentList() {
-        return studentList;
+    public static CircularDoublyLinkedList getJobPositionList() {
+        return jobPositionList;
     }
 
-    public static void setStudentList(SinglyLinkedList studentList) {
-        Utility.studentList = studentList;
+    public static void setJobPositionList(CircularDoublyLinkedList jobPositionList) {
+        Utility.jobPositionList = jobPositionList;
     }
 
-    public static DoublyLinkedList getCourseList() {
-        return courseList;
+    public static CircularLinkedList getEmployeeList() {
+        return employeeList;
     }
 
-    public static void setCourseList(DoublyLinkedList courseList) {
-        Utility.courseList = courseList;
-    }*/
+    public static void setEmployeeList(CircularLinkedList employeeList) {
+        Utility.employeeList = employeeList;
+    }
 
     public static int random() {
         return 1 + (int) Math.floor(Math.random() * 99);
@@ -137,10 +142,27 @@ public class Utility {
             alfabeto[cont++] = i;
         return alfabeto[(int) (Math.random() * 25 - 1)];
     }
-    public static int getAge(Date date){
 
-        //Calcula la edad
-        return 0;
+    public static int getAge(Date date) {
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate fechaNac = LocalDate.parse((CharSequence) date, fmt);
+        LocalDate ahora = LocalDate.now();
+
+        Period periodo = Period.between(fechaNac, ahora);
+        int edad = Integer.parseInt(String.valueOf(periodo));
+        return edad;
+    }
+
+    public static int random (int lowBound, int highBound){
+        int value =0;
+        do {
+            value = lowBound+(int) Math.floor((Math.random()*highBound));
+        }while (!isBetween(value,lowBound,highBound));
+        return value;
+    }
+
+    private static boolean isBetween(int value, int lowBound, int highBound) {
+        return lowBound<= value && value<=highBound;
     }
 
 }

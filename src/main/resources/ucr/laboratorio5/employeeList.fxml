@@ -13,7 +13,7 @@
    <center>
       <AnchorPane id="AnchorPane" prefHeight="533.0" prefWidth="1004.0">
          <children>
-            <Pane layoutX="48.0" prefHeight="82.0" prefWidth="955.0" style="-fx-background-color: orange;" AnchorPane.leftAnchor="48.0">
+            <Pane layoutX="48.0" prefHeight="82.0" prefWidth="955.0" style="-fx-background-color: lightblue;" AnchorPane.leftAnchor="48.0">
                <children>
                   <Text layoutX="169.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee List (Circular Linked List">
                      <font>

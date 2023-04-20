@@ -40,7 +40,7 @@
                               <Font name="Arial" size="25.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="txtDescription" alignment="CENTER" editable="false" layoutX="246.0" layoutY="66.0" prefHeight="48.0" prefWidth="344.0">
+                        <TextField fx:id="txtDescription" alignment="CENTER" layoutX="246.0" layoutY="66.0" prefHeight="48.0" prefWidth="344.0">
                            <font>
                               <Font name="Arial" size="25.0" />
                            </font>
@@ -50,7 +50,7 @@
                               <Font name="Arial" size="25.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="txtHourlyWage" alignment="CENTER" editable="false" layoutX="246.0" layoutY="114.0" onKeyPressed="#onKeyTypeCreditsValidation" onKeyTyped="#onKeyTypeCreditsValidation" prefHeight="48.0" prefWidth="78.0">
+                        <TextField fx:id="txtHourlyWage" alignment="CENTER" layoutX="246.0" layoutY="114.0" onKeyPressed="#onKeyTypeCreditsValidation" onKeyTyped="#onKeyTypeCreditsValidation" prefHeight="48.0" prefWidth="78.0">
                            <font>
                               <Font name="Arial" size="25.0" />
                            </font>

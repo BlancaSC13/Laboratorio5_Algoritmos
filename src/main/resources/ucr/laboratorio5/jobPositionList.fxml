@@ -13,7 +13,7 @@
    <center>
       <AnchorPane id="AnchorPane" prefHeight="533.0" prefWidth="1004.0">
          <children>
-            <Pane layoutX="48.0" prefHeight="82.0" prefWidth="955.0" style="-fx-background-color: orange;" AnchorPane.leftAnchor="48.0">
+            <Pane layoutX="48.0" prefHeight="82.0" prefWidth="955.0" style="-fx-background-color: lightblue;" AnchorPane.leftAnchor="48.0">
                <children>
                   <Text layoutX="63.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Job Position List (with estimate Monthly Wage)">
                      <font>
@@ -26,7 +26,7 @@
                <children>
                   <Pane layoutX="48.0" layoutY="-3.0" prefHeight="256.0" prefWidth="954.0" style="-fx-background-color: #60AEDB;">
                      <children>
-                        <TableView fx:id="courseTableView" layoutY="-1.0" prefHeight="256.0" prefWidth="953.0">
+                        <TableView fx:id="jobOptionTableView" layoutY="-1.0" prefHeight="256.0" prefWidth="953.0">
                           <columns>
                             <TableColumn fx:id="idTableColumn" maxWidth="890.0" minWidth="30.0" prefWidth="89.0" text="ID" />
                             <TableColumn fx:id="descriptionTableColumn" maxWidth="3880.0" minWidth="30.0" prefWidth="388.0" text="Description" />

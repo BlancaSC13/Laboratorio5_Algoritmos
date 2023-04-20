@@ -21,9 +21,29 @@ public class JobPosition {
     @Override
     public String toString() {
         return "JobPosition{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                ", hourlyWage=" + hourlyWage +
+                "Code=" + id +
+                ", Description='" + description + '\'' +
+                ", Hourly Wage=" + hourlyWage +
                 '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getHourlyWage() {
+        return hourlyWage;
+    }
+
+    public void setHourlyWage(double hourlyWage) {
+        this.hourlyWage = hourlyWage;
     }
 }

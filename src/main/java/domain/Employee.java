@@ -1,5 +1,7 @@
 package domain;
 
+import util.Utility;
+
 import java.util.Date;
 
 public class Employee {
@@ -18,8 +20,7 @@ public class Employee {
     }
 
     public int getAge() {
-
-        return 0;
+        return Utility.getAge(birthday);//realizar método
     }
 
     @Override
