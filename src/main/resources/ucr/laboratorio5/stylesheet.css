@@ -1,0 +1,211 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22 abr. 2021, 15:21:29
+    Author     : Profesor Gilberth Chaves A <gchavesav@ucr.ac.cr>
+*/
+
+    .root {
+        -fx-spacing: 30;
+        -fx-background-color:  cornsilk;
+        /*-fx-background-color: cadetblue;*/
+        /*-fx-padding: 20;*/
+    }
+    
+    .button {
+        -fx-font-family: "Arial";
+        -fx-font-size: 25px;
+        -fx-font-weight: bold;
+        -fx-background-color: lightskyblue;
+    }
+    
+    .button:hover {
+        -fx-background-color: brown;
+        -fx-scale-y: 1.1;
+    }
+
+    .button:pressed {
+        -fx-scale-y: 0.9;
+        -fx-scale-x: 0.9;
+    }
+    
+    .menu-bar {
+        -fx-background-color: black ;
+        -fx-opacity: 0.5;
+        -fx-border-width: 2.0;
+
+    }
+    
+    .menu-bar .label {
+        -fx-font-size: 20.0 pt;
+        -fx-font-family: "Arial";
+        /*-fx-font-family: "Bookman Old Style";*/
+        -fx-text-fill: white;
+        /*-fx-font-weight: bold; */
+        -fx-padding: 7.0px;
+    }
+    .menu-bar .menu-button:hover, .menu-bar .menu-button:focused, .menu-bar .menu-button:showing {
+        -fx-background: black ;
+        -fx-opacity: 0.5;
+        -fx-text-fill: white;
+    }
+
+    .menu-item {
+        -fx-padding: 0.0em 0.0em 0.0em 0.0em;
+        -fx-text-fill: black;
+        -fx-background: darkgray ;
+    }
+    .menu-item .label{
+        -fx-font-size: 18.0 pt;
+        -fx-text-fill: black;
+    }
+    .menu-item .label:hover{
+        -fx-font-size: 14.0 pt;
+        -fx-background: black ;
+        -fx-text-fill: white;
+    }
+    
+    .menu-button {
+        -fx-background-color: red;
+    }
+
+    /*SPLIT MENU BUTTON*/
+    
+    .split-menu-button .label {
+        -fx-font-family: "Arial";
+        /*-fx-background-color: #0099cc;*/
+        -fx-font-size: 25.0 pt;
+        -fx-text-fill: #0066cc;
+    }
+
+    .split-menu-button .arrow {
+        -fx-background-color: chocolate;
+    }
+    
+    .table-view .column-header-background{
+        -fx-background-color: transparent;
+    }
+
+/* formato para las celdas del tableview */
+.table-cell {     
+    -fx-padding: 0.5em 0.5em 0.1em 0.3em;
+    -fx-border-color: -fx-box-border -fx-box-border transparent transparent;  
+    /*-fx-font: 13px "Segoe UI";*/
+    -fx-font: 16px "Arial";
+    -fx-border-insets: 0;
+    -fx-alignment: CENTER;
+}
+
+/* color de fondo para cuando el raton este sobre la celda */
+.table-cell:hover {
+    -fx-background-color: #9900ff;
+}
+
+/* color para filas vacias,
+// aplicar el mismo color cuando el raton este sobre una celda de una fila vacia
+*/
+.table-row-cell:empty, .table-cell:empty:hover {
+    -fx-background-color: white;
+}
+
+/*eliminar borde de celdas en las filas vacias */
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+
+/* color de una fila cuando en raton se encuentra sobre la misma */
+.table-view:row-selection .table-row-cell:filled:hover {
+    -fx-background-color: rgba(28, 183, 236, 0.25);
+}
+
+/* color de una fila cuando en raton se encuentra sobre una fila que esta seleccionada */
+.table-view:row-selection .table-row-cell:filled:selected:hover {
+    -fx-background-color: rgba(228, 183, 236, 0.90);
+}
+
+/* color de una fila seleccionada por el usuario */
+.table-view:row-selection .table-row-cell:filled:selected {
+    -fx-background-color: rgba(28, 183, 236, 0.65);
+}
+
+/* eliminar border del table que aparece cuando el mismo tiene el foco */
+.table-view, .table-view:focused {
+  -fx-background-color: transparent,-fx-box-border,-fx-control-inner-background;
+  -fx-background-insets: -1.4, 0, 1;
+  -fx-background-radius: 1.4, 0, 0;
+}
+
+/* centrar y cambiar color de los titulos de columnas */
+.table-view .column-header .label{
+    -fx-text-fill: #52677A;
+    -fx-font: 16px "Arial";
+    -fx-alignment: CENTER;
+}
+
+/* color de fondo del titulo de columna cuando en roton esta sobre ella */
+.table-view .column-header:hover {
+    -fx-background-color: whitesmoke;
+}
+
+/* tamaño, bordes y color de fondo de los titulos */
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: white;
+    -fx-size: 45;
+    -fx-border-color: -fx-box-border;
+    -fx-border-width: 0 1 3 0;
+    -fx-border-insets: 0;
+}
+
+/* hacer transparente el fondo de los titulos */
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+/* estilo para el boton que permite ocultar o mostrar las columnas */
+.table-view .show-hide-columns-button {
+    -fx-background-color: white;
+    -fx-border-color: -fx-box-border;
+    -fx-border-insets: 0;
+}
+
+.date-picker > .text-field {
+    -fx-font: 20px "Arial";
+    -fx-background-color:
+        linear-gradient(to bottom, derive(-fx-text-box-border, -10%), -fx-text-box-border),
+        linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);
+    -fx-background-insets: 1 0 1 1;
+    -fx-background-radius: 2 0 0 2;
+}
+
+.date-picker:focused > .text-field,
+.date-picker > .text-field:focused {
+    -fx-background-color:
+        -fx-control-inner-background,
+        -fx-faint-focus-color,
+        linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);
+    -fx-background-insets: 1 0 1 1, 1 0 1 1, 3 2 3 3;
+    -fx-background-radius: 2 0 0 2, 1 0 0 1, 0;
+}
+
+ /*Background color of the whole context menu*/
+.choice-box .context-menu { -fx-background-color: black; }
+/*Focused item background color in the list*/
+.choice-box .menu-item:focused { -fx-background-color: orange; }
+/*Text color of non-focused items in the list*/
+.choice-box .menu-item > .label { -fx-text-fill: white; -fx-font: 30px "Arial";}
+/*Text color of focused item in the list*/
+.choice-box .menu-item:focused > .label { -fx-text-fill: black; }
+
+/*/Background color of the control itself*/
+.choice-box {
+  -fx-background-color: black;
+  -fx-mark-color: orange; /*arrow color*/
+}
+/*Selected item text color on the control itself*/
+.choice-box > .label { 
+    -fx-text-fill: salmon;
+    -fx-font: 30px "Arial";
+}

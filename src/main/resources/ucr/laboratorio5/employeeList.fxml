@@ -9,13 +9,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="bp" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.JobPositionListController">
+<BorderPane fx:id="bp" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeListController">
    <center>
       <AnchorPane id="AnchorPane" prefHeight="533.0" prefWidth="1004.0">
          <children>
             <Pane layoutX="48.0" prefHeight="82.0" prefWidth="955.0" style="-fx-background-color: orange;" AnchorPane.leftAnchor="48.0">
                <children>
-                  <Text layoutX="63.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Job Position List (with estimate Monthly Wage)">
+                  <Text layoutX="169.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee List (Circular Linked List">
                      <font>
                         <Font name="Arial" size="40.0" />
                      </font>
@@ -28,18 +28,18 @@
                      <children>
                         <TableView fx:id="courseTableView" layoutY="-1.0" prefHeight="256.0" prefWidth="953.0">
                           <columns>
-                            <TableColumn fx:id="idTableColumn" maxWidth="890.0" minWidth="30.0" prefWidth="89.0" text="ID" />
-                            <TableColumn fx:id="descriptionTableColumn" maxWidth="3880.0" minWidth="30.0" prefWidth="388.0" text="Description" />
-                              <TableColumn fx:id="hourlyWageTableColumn" maxWidth="1680.0" minWidth="30.0" prefWidth="168.0" text="Hourly Wage" />
-                              <TableColumn fx:id="totalHoursTableColumn" maxWidth="1100.0" minWidth="30.0" prefWidth="110.0" text="Total hours" />
-                              <TableColumn fx:id="monthlyWageTableColumn" maxWidth="2000.0" minWidth="30.0" prefWidth="200.0" text="Monthly Wage" />
+                            <TableColumn fx:id="idTableColumn" prefWidth="131.0" text="ID" />
+                            <TableColumn fx:id="nameTableColumn" prefWidth="257.0" text="Last Name" />
+                              <TableColumn fx:id="creditsTableColumn" minWidth="0.0" prefWidth="191.0" text="First Name" />
+                              <TableColumn prefWidth="176.0" text="Title" />
+                              <TableColumn prefWidth="200.0" text="Birthday" />
                           </columns>
                         </TableView>
                      </children>
                   </Pane>
                </children>
             </Pane>
-            <Button layoutX="231.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnSortByHour" prefHeight="63.0" prefWidth="169.0" text="Sort by hour">
+            <Button layoutX="231.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnSortByID" prefHeight="63.0" prefWidth="169.0" text="Sort by id">
                <font>
                   <Font size="30.0" />
                </font>

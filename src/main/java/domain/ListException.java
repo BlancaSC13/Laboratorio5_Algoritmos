@@ -1,2 +1,8 @@
-package domain;public class ListException {
+package domain;
+
+public class ListException extends Exception {
+
+    public ListException(String message) {
+        super(message);
+    }
 }
